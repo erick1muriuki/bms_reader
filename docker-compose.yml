@@ -1,0 +1,9 @@
+services:
+  bms_reader:
+    build: .
+    container_name: bms_reader
+    network_mode: host
+    privileged: true
+    volumes:
+      - /var/run/dbus:/var/run/dbus
+    restart: unless-stopped
